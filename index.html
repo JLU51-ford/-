@@ -179,6 +179,13 @@
                 }, 100);
             }
         }
+        
+        function testIosOpenDeeplink() {
+                window.location.href = deeplink3; /***打开app的协议，有安卓同事提供***/
+                window.setTimeout(function () {
+                    window.location.href = applink3; /***iOS移动端下载地址***/
+                }, 2000);
+        }
          
         function ios() {
             window.location.href = universal_link + "?schema=" + encodeURIComponent(download_schema);
@@ -245,6 +252,8 @@ JS方式打开链接
         <a onclick="deepApp2()">点击唤醒app-测试地址</a>	
         </br>
         <a onclick="deepApp3()">点击唤醒app-生产地址</a>
+        </br>
+        <a onclick="testIosOpenDeeplink()">测试iOS打开deeplinkXXXXX</a>
         </br>
     </br>
         _blank A标签方式打开：
